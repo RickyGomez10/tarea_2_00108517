@@ -1,42 +1,4 @@
-        ;Ejercicio 1
-        mov ax, 0
-        mov bx, 8
-        add ax,bx
-        mov bx, 5
-        add ax, bx
-        mov bx, 1
-        add ax, bx
-        mov bx, 7
-        add ax, bx
-        mov bx, 5
-        div bx
-        
-        mov cl, "M"
-        mov  [200h], cl
-        mov cl, "E"
-        mov  [201h], cl
-        mov cl, " "
-        mov  [202h], cl
-        mov cl, "R"
-        mov  [203h], cl
-        mov cl, "E"
-        mov  [204h], cl
-        mov cl, "C"
-        mov  [205h], cl
-        mov cl, "U"
-        mov  [206h], cl
-        mov cl, "P"
-        mov  [207h], cl
-        mov cl, "E"
-        mov  [208h], cl
-        mov cl, "R"
-        mov  [209h], cl
-        mov cl, "0"
-        mov  [20Ah], cl
-        
-        int 20h
- 
-      
+
        ;ejercicio 2
         mov al, 2d
         mov bl, 2d
@@ -57,28 +19,5 @@
             mov [di+200h], ah
             add di, 1
             mul bx
-            loop fcarry
+            loop foverflow
             int 20h
-
-        ;Ejercicio 3
-        mov ax, 0d 
-        mov bx, 1d 
-        mov cx, 12d 
-        mov di, 0d 
-        mov [di+200h], ax 
-        add di,1 
-        mov[di+200h],bx 
-        add ax,bx 
-        add di,1 
-        mov[di+200h], ax 
-        add ax,bx 
-        add di, 1 
-        fibonacci:
-            mov[di + 200h], ax 
-            mov dx, ax
-            add ax, bx
-            mov bx, dx
-            add di, 1d
-            loop fibonacci
-            int 20h    
-    
